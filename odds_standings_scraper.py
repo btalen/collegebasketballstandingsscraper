@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-
+import sys
 # Step 1: Install the required libraries
 # You can install them using pip:
 # pip install requests beautifulsoup4
@@ -104,4 +104,7 @@ with open('standings.csv', mode='w', newline='') as file:
                 else:
                     OU_away_ties = 0
                 
-                writer.writerow([team] + [wins] + [losses] + [home_wins] + [home_losses] + [away_wins] + [away_losses] + [ATS_wins] + [ATS_losses] + [ATS_ties] + [ATS_home_wins] + [ATS_home_losses] + [ATS_home_ties] + [ATS_away_wins] + [ATS_away_losses] + [ATS_away_ties] + [OU_wins] + [OU_losses] + [OU_ties] + [OU_home_wins] + [OU_home_losses] + [OU_home_ties] + [OU_away_wins] + [OU_away_losses] + [OU_away_ties])
+                writer.writerow([team] + [wins] + [losses] + [home_wins] + [home_losses] + [away_wins] + [away_losses] + [ATS_wins] + [ATS_losses] + [ATS_ties] + [ATS_home_wins] + [ATS_home_losses] + [ATS_home_ties] + [ATS_away_wins] + [ATS_away_losses] + [ATS_away_ties] + [OU_wins] + [OU_losses] + [OU_ties] + [OU_home_wins] + [OU_home_losses] + [OU_home_ties] + [OU_away_wins] + [OU_away_losses] + [OU_away_ties])\
+                
+                # Exit the script gracefully
+                sys.exit()
